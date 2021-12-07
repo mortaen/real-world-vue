@@ -1,32 +1,25 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'event-show', params: { id: '1' } }"
+    :to="{ name: 'event-show', params: { id: event.id } }"
   >
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }} </span>
       <h4 class="title">{{ event.title }}</h4>
-      <span>{{ event.attendees.length }} attending</span>
+      <BaseIcon name="users"
+        >{{ event.attendees ? event.attendees.length : 0 }} attending</BaseIcon
+      >
     </div>
   </router-link>
 </template>
 
 <script>
+import BaseIcon from './BaseIcon.vue'
 export default {
-  data() {
-    return {
-      event: {
-        id: 1,
-        title: 'Riverbank Cleanup',
-        date: 'Tues Aug 19, 2022',
-        time: '6:00',
-        attendees: [
-          { id: 'abc123', name: 'Adam Jahr' },
-          { id: 'def456', name: 'Greg Pollack' },
-        ],
-      },
-    }
+  props: {
+    event: Object,
   },
+  components: { BaseIcon },
 }
 </script>
 

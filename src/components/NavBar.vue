@@ -1,9 +1,14 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="nav">
+    <router-link to="/" class="brand nav-item">Real World Events</router-link>
     <nav>
-      <router-link to="/" class="brand">Real World Events</router-link> |
-      <router-link :to="{ name: 'event-list' }">List</router-link> |
-      <router-link :to="{ name: 'event-create' }">Create Event</router-link>
+      <router-link :to="{ name: 'event-list' }" class="nav-item"
+        >List</router-link
+      >
+      |
+      <router-link :to="{ name: 'event-create' }" class="nav-item"
+        >Create Event</router-link
+      >
     </nav>
   </div>
 </template>
