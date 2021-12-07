@@ -14,7 +14,7 @@ const routes = [
     component: EventList,
   },
   {
-    path: '/event',
+    path: '/event/',
     name: 'event-show',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -26,9 +26,16 @@ const routes = [
     name: 'event-create',
     component: EventCreate,
   },
+  {
+    path: '/event/:username',
+    name: 'user',
+    component: User,
+    props: true,
+  },
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes,
 })
 
