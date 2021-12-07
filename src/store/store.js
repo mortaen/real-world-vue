@@ -15,18 +15,18 @@ export default new Vuex.Store({
       'food',
       'community',
     ],
+    events: [
+      { id: 1, title: '...', organizer: '...' },
+      { id: 2, title: '...', organizer: '...' },
+      { id: 3, title: '...', organizer: '...' },
+      { id: 4, title: '...', organizer: '...' },
+    ],
   },
   mutations: {},
   actions: {},
   getters: {
-    catLength: (state) => {
-      return state.categories.length
-    },
-    doneTodos: (state) => {
-      return state.todos.filter((todo) => todo.done)
-    },
-    activeTodosCount: (state) => {
-      return state.todos.filter((todo) => !todo.done).length
+    getEventById: (state) => (id) => {
+      return state.events.find((event) => event.id === id)
     },
   },
   modules: {},
