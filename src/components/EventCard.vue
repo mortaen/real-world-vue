@@ -14,12 +14,10 @@
 </template>
 
 <script>
-import BaseIcon from './BaseIcon.vue'
 export default {
   props: {
     event: Object,
   },
-  components: { BaseIcon },
 }
 </script>
 
