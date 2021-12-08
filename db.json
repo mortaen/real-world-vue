@@ -231,6 +231,24 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 154995,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "walk in nature",
+      "description": "walking",
+      "location": "",
+      "date": "2021-12-11T09:14:00.000Z",
+      "time": "10:00",
+      "attendees": []
     }
   ]
 }
