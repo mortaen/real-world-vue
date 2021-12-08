@@ -63,7 +63,6 @@ export default {
     }
     return {
       times,
-      categories: this.$store.state.categories,
       event: this.createFreshEventObject(),
     }
   },
